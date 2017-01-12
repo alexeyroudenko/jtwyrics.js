@@ -1,0 +1,63 @@
+body {
+	color: #777;
+	font-family:Verdana;
+	text-align:center;
+	background-color: #1b1a1f;
+	overflow: hidden;
+}
+
+#lyrics_container {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:100%;
+	height:100%;
+	display: table;
+	text-align: center;
+	vertical-align: middle;
+	z-index: -200;
+}
+
+#lyrics_output {
+	color:#ffffff;
+	font-size:80px;
+	font-size:17vh;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+/*#div 	{
+	padding: 0px;
+	margin: 0px;
+}
+*/
+#panels > * {
+	border:1px solid #333;
+	background-color: #141414;
+	opacity: .7;
+	text-align: left;
+	padding: 5px;
+	margin: 5px;
+	font-size:12px;
+	width:auto;
+}
+
+#progressbar {
+	width:400px;
+}
+
+span.active {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+a {
+	color: #888;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #aaa;
+	text-decoration: underline;
+}
