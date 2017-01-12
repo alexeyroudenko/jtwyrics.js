@@ -1,0 +1,45 @@
+<html lang="en">
+
+	<head>
+		<title>sound</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="style.css">
+
+	</head>
+
+	<body>
+
+		<div id="lyrics_container"><div id="lyrics_output">....</div>
+
+		<script src="karaoke.js"></script>
+		<script src="lyrics.js"></script>
+		<script src="simulate.js"></script>
+
+		<script>
+
+		var simulate = new TimeSimulator();
+		var lyrics = new Lyrics("lyrics.ass");
+		var karaoke = new Karaoke();
+		
+		lyrics.onComplete = function(lyrics) {
+			console.log("twyrics.onReady");
+			karaoke.setupw(lyrics);
+			simulate.start();
+			animate();
+		}
+		lyrics.load();
+
+		function animate() {
+			
+			lyrics.update(simulate.getTime());
+
+			requestAnimationFrame(animate);
+		}
+
+		</script>
+
+	</body>
+</html>
