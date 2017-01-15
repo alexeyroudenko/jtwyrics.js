@@ -12,10 +12,17 @@
 
 	<body>
 
-		<div id="lyrics_container"><div id="lyrics_output">....</div>
+		<div id="panels">
+			<div id="lyrics"></div>
+			<div id="tweets"></div>
+		</div>
+
+
+		<div id="lyrics_container"><div id="lyrics_output"></div>
 
 		<script src="karaoke.js"></script>
 		<script src="lyrics.js"></script>
+		<script src="tweets.js"></script>
 		<script src="simulate.js"></script>
 
 		<script>
@@ -24,18 +31,20 @@
 		var lyrics = new Lyrics("lyrics.ass");
 		var karaoke = new Karaoke();
 		
-		lyrics.onComplete = function(lyrics) {
-			console.log("twyrics.onReady");
+		lyrics.onComplete = function() {
+			console.log("lyrics.onReady", lyrics);
 			karaoke.setupw(lyrics);
 			simulate.start();
 			animate();
+
 		}
 		lyrics.load();
 
 		function animate() {
-			
+			if (lyrics.changed) {
+				document.getElementById("lyrics").innerHTML = lyrics.getNearest();
+			}
 			lyrics.update(simulate.getTime());
-
 			requestAnimationFrame(animate);
 		}
 

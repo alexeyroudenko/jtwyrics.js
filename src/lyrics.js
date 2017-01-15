@@ -126,7 +126,7 @@ Lyrics.prototype.parse = function(text) {
 			index++;
 		}
 	}
-
+	this.changed = true;
 	this.onComplete();
 }
 
@@ -172,6 +172,22 @@ Lyrics.prototype.formattedActiveTweets = function() {
 				string += tweet['tweet_time'] + "<br>";
 				string += tweet['tweet_url'] + "<br>";
 			}
+		}
+	}
+	return string;
+}
+
+Lyrics.prototype.getNearest = function() {
+	var string = "";
+	var type = 0;
+	for(i in this.lyrics) {
+		if (type == 0 && this.lyrics[i].state == 'forward') {
+			string = this.lyrics[i].string;
+			type = 1;
+		}
+		if (type == 0 && this.lyrics[i].state == 'active') {
+			string = this.lyrics[i].string;
+			type = 1;
 		}
 	}
 	return string;

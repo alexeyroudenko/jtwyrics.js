@@ -8,8 +8,10 @@ ScaledBorderAndShadow: yes
 YCbCr Matrix: None
 
 [Aegisub Project Garbage]
-Audio File: /Users/jay/Dropbox/CC/js/js.sing/app/static/audio/track0.mp3
-Active Line: 7
+Export Encoding: Unicode (UTF-8)
+Audio File: C:/Users/Dmitriev/Downloads/12_david_bowie_heroes_myzuka.org.mp3
+Scroll Position: 61
+Active Line: 65
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
@@ -17,13 +19,91 @@ Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:02.50,0:00:07.00,Default,,0,0,0,,Heroes
-Dialogue: 0,0:00:12.00,0:00:13.00,Default,,0,0,0,,One
-Dialogue: 0,0:00:16.91,0:00:23.59,Default,,0,0,0,,I
-Dialogue: 0,0:00:23.59,0:00:26.14,Default,,0,0,0,,And you
-Dialogue: 0,0:00:26.14,0:00:30.68,Default,,0,0,0,,will be queen
-Dialogue: 0,0:00:35.39,0:00:38.89,Default,,0,0,0,,will drive them
-Dialogue: 0,0:00:41.80,0:00:44.94,Default,,0,0,0,,We can beat them
-Dialogue: 0,0:00:45.41,0:00:48.47,Default,,0,0,0,,one day
-Dialogue: 0,0:00:49.56,0:00:51.90,Default,,0,0,0,,Heroes
-Dialogue: 0,0:00:53.95,0:00:57.45,Default,,0,0,0,,one day
+Dialogue: 0,0:00:16.70,0:00:18.20,Default,,0,0,0,,I
+Dialogue: 0,0:00:20.00,0:00:22.20,Default,,0,0,0,,I will be king
+Dialogue: 0,0:00:24.90,0:00:26.00,Default,,0,0,0,,And you
+Dialogue: 0,0:00:28.50,0:00:31.20,Default,,0,0,0,,you will be queen
+Dialogue: 0,0:00:33.50,0:00:35.20,Default,,0,0,0,,Though nothing
+Dialogue: 0,0:00:36.80,0:00:38.12,Default,,0,0,0,,will drive them
+Dialogue: 0,0:00:38.12,0:00:39.00,Default,,0,0,0,,away
+Dialogue: 0,0:00:41.90,0:00:43.70,Default,,0,0,0,,We can beat them
+Dialogue: 0,0:00:45.60,0:00:47.50,Default,,0,0,0,,just for one day
+Dialogue: 0,0:00:50.00,0:00:51.80,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:00:54.20,0:00:56.00,Default,,0,0,0,,just for one day
+Dialogue: 0,0:00:59.15,0:01:00.40,Default,,0,0,0,,And you
+Dialogue: 0,0:01:02.50,0:01:04.40,Default,,0,0,0,,you can be mean
+Dialogue: 0,0:01:07.70,0:01:09.10,Default,,0,0,0,,And I
+Dialogue: 0,0:01:11.30,0:01:12.47,Default,,0,0,0,,I'll drink all
+Dialogue: 0,0:01:12.47,0:01:13.50,Default,,0,0,0,,the time
+Dialogue: 0,0:01:15.50,0:01:16.52,Default,,0,0,0,,Cause we're
+Dialogue: 0,0:01:16.52,0:01:17.50,Default,,0,0,0,,lovers
+Dialogue: 0,0:01:19.40,0:01:21.70,Default,,0,0,0,,and that is a fact
+Dialogue: 0,0:01:24.10,0:01:26.10,Default,,0,0,0,,Yes we're lovers
+Dialogue: 0,0:01:28.10,0:01:29.70,Default,,0,0,0,,and that is that
+Dialogue: 0,0:01:33.30,0:01:35.00,Default,,0,0,0,,Though nothing
+Dialogue: 0,0:01:36.50,0:01:37.76,Default,,0,0,0,,will keep us
+Dialogue: 0,0:01:37.76,0:01:38.90,Default,,0,0,0,,together
+Dialogue: 0,0:01:40.80,0:01:42.04,Default,,0,0,0,,We could steal
+Dialogue: 0,0:01:42.04,0:01:42.90,Default,,0,0,0,,time
+Dialogue: 0,0:01:45.10,0:01:47.20,Default,,0,0,0,,just for one day
+Dialogue: 0,0:01:49.50,0:01:51.70,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:01:53.40,0:01:55.70,Default,,0,0,0,,for ever and ever
+Dialogue: 0,0:01:57.20,0:01:58.70,Default,,0,0,0,,What d'you say?
+Dialogue: 0,0:02:16.10,0:02:17.50,Default,,0,0,0,,I
+Dialogue: 0,0:02:19.30,0:02:20.22,Default,,0,0,0,,I wish you
+Dialogue: 0,0:02:20.22,0:02:21.50,Default,,0,0,0,,could swim
+Dialogue: 0,0:02:24.30,0:02:26.30,Default,,0,0,0,,Like the dolphins
+Dialogue: 0,0:02:27.50,0:02:28.78,Default,,0,0,0,,like dolphins
+Dialogue: 0,0:02:28.78,0:02:30.50,Default,,0,0,0,,can swim
+Dialogue: 0,0:02:33.10,0:02:34.70,Default,,0,0,0,,Though nothing
+Dialogue: 0,0:02:35.40,0:02:37.14,Default,,0,0,0,,nothing will keep
+Dialogue: 0,0:02:37.14,0:02:38.70,Default,,0,0,0,,us together
+Dialogue: 0,0:02:41.20,0:02:43.50,Default,,0,0,0,,We can beat them
+Dialogue: 0,0:02:44.80,0:02:47.30,Default,,0,0,0,,for ever and ever
+Dialogue: 0,0:02:49.20,0:02:50.69,Default,,0,0,0,,Oh we can be
+Dialogue: 0,0:02:50.69,0:02:51.70,Default,,0,0,0,,Heroes
+Dialogue: 0,0:02:53.70,0:02:56.00,Default,,0,0,0,,just for one day
+Dialogue: 0,0:03:16.10,0:03:17.50,Default,,0,0,0,,I
+Dialogue: 0,0:03:19.20,0:03:21.60,Default,,0,0,0,,I will be king
+Dialogue: 0,0:03:24.30,0:03:26.30,Default,,0,0,0,,And you
+Dialogue: 0,0:03:27.70,0:03:29.90,Default,,0,0,0,,you will be queen
+Dialogue: 0,0:03:32.60,0:03:34.70,Default,,0,0,0,,Though nothing
+Dialogue: 0,0:03:35.90,0:03:37.64,Default,,0,0,0,,will drive them
+Dialogue: 0,0:03:37.64,0:03:38.70,Default,,0,0,0,,away
+Dialogue: 0,0:03:40.60,0:03:42.90,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:03:44.80,0:03:47.00,Default,,0,0,0,,just for one day
+Dialogue: 0,0:03:49.80,0:03:52.10,Default,,0,0,0,,We can be us
+Dialogue: 0,0:03:53.40,0:03:55.30,Default,,0,0,0,,just for one day
+Dialogue: 0,0:03:58.90,0:04:00.20,Default,,0,0,0,,I
+Dialogue: 0,0:04:02.00,0:04:05.00,Default,,0,0,0,,I can remember
+Dialogue: 0,0:04:07.20,0:04:09.20,Default,,0,0,0,,Standing
+Dialogue: 0,0:04:10.90,0:04:12.90,Default,,0,0,0,,by the wall
+Dialogue: 0,0:04:15.30,0:04:17.60,Default,,0,0,0,,And the guns
+Dialogue: 0,0:04:19.20,0:04:20.32,Default,,0,0,0,,shot above
+Dialogue: 0,0:04:20.32,0:04:22.20,Default,,0,0,0,,our heads
+Dialogue: 0,0:04:23.80,0:04:25.80,Default,,0,0,0,,And we kissed
+Dialogue: 0,0:04:26.80,0:04:28.34,Default,,0,0,0,,as though nothing
+Dialogue: 0,0:04:28.34,0:04:29.80,Default,,0,0,0,,could fall
+Dialogue: 0,0:04:32.10,0:04:34.50,Default,,0,0,0,,And the shame
+Dialogue: 0,0:04:36.50,0:04:37.54,Default,,0,0,0,,was on the
+Dialogue: 0,0:04:37.54,0:04:39.20,Default,,0,0,0,,other side
+Dialogue: 0,0:04:40.50,0:04:41.51,Default,,0,0,0,,Oh we can
+Dialogue: 0,0:04:41.51,0:04:42.90,Default,,0,0,0,,beat them
+Dialogue: 0,0:04:44.20,0:04:47.20,Default,,0,0,0,,for ever and ever
+Dialogue: 0,0:04:48.50,0:04:50.35,Default,,0,0,0,,Then we could be
+Dialogue: 0,0:04:50.35,0:04:51.50,Default,,0,0,0,,Heroes
+Dialogue: 0,0:04:53.20,0:04:55.90,Default,,0,0,0,,just for one day
+Dialogue: 0,0:05:01.70,0:05:04.70,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:05:10.00,0:05:13.00,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:05:18.60,0:05:21.60,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:05:22.70,0:05:25.30,Default,,0,0,0,,Just for one day
+Dialogue: 0,0:05:27.00,0:05:30.20,Default,,0,0,0,,We can be Heroes
+Dialogue: 0,0:05:31.50,0:05:34.20,Default,,0,0,0,,We're nothing
+Dialogue: 0,0:05:35.30,0:05:36.65,Default,,0,0,0,,and nothing will
+Dialogue: 0,0:05:36.65,0:05:38.30,Default,,0,0,0,,help us
+Dialogue: 0,0:05:39.80,0:05:42.20,Default,,0,0,0,,Maybe we're lying
+Dialogue: 0,0:05:43.40,0:05:44.56,Default,,0,0,0,,then you better
+Dialogue: 0,0:05:44.56,0:05:46.40,Default,,0,0,0,,not stay
+Dialogue: 0,0:05:47.80,0:05:49.05,Default,,0,0,0,,But we could
+Dialogue: 0,0:05:49.05,0:05:50.80,Default,,0,0,0,,be safer
+Dialogue: 0,0:05:52.40,0:05:55.40,Default,,0,0,0,,just for one day
