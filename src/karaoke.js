@@ -5,6 +5,8 @@
 
 function Karaoke() {
 	this.active = true;
+    this.doAnimation = false;
+    this.doSetDiv = true;
 }
 
 Karaoke.prototype.setupw = function(lyrics) {
@@ -24,18 +26,19 @@ Karaoke.prototype.setupw = function(lyrics) {
 }
 
 function anim(x) {
+   console.log("[Karaoke]", "anim");
    $('#lyrics_output').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	 	$(this).removeClass();
    });
  };
 
 Karaoke.prototype.showText = function(item) {
-	document.getElementById("lyrics_output").innerHTML = item.string;
-	//anim("flipInX");
+	if (this.doSetDiv) document.getElementById("lyrics_output").innerHTML = item.string;
+	if (this.doAnimation) anim("flipInX");
 }
 
 Karaoke.prototype.hideText = function(item) {
-	document.getElementById("lyrics_output").innerHTML = "";
+	if (this.doSetDiv) document.getElementById("lyrics_output").innerHTML = "";
 }
 
 

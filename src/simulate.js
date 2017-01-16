@@ -1,14 +1,16 @@
 
 
 
-function TimeSimulator() {
+function TimeSimulator(time) {
+    if (time == 'undefined') time = 0;
 	var date = new Date();
-	this.startTime = date.getTime();
+	this.startTime = date.getTime() - time * 1000.0;
 }
 
-TimeSimulator.prototype.start = function () {
+TimeSimulator.prototype.start = function (time) {
+    if (time == 'undefined') time = 0;
 	var date = new Date();
-	this.startTime = date.getTime();	
+	this.startTime = date.getTime() - time * 1000.0;	
 }
 
 TimeSimulator.prototype.getProgress = function() {
