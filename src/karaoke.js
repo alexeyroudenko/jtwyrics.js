@@ -26,7 +26,7 @@ Karaoke.prototype.setupw = function(lyrics) {
 }
 
 function anim(x) {
-   console.log("[Karaoke]", "anim");
+   // console.log("[Karaoke]", "anim");
    $('#lyrics_output').removeClass().addClass(x + ' animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 	 	$(this).removeClass();
    });

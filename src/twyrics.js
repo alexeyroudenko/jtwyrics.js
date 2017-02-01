@@ -1,21 +1,9 @@
-
-
-
-function TimeSimulator() {
-	var date = new Date();
-	this.startTime = date.getTime();
-}
-
-TimeSimulator.prototype.getProgress = function() {
-	var date = new Date();
-	return (0.00001 * (date.getTime() - this.startTime)).toFixed(2);
-}
-
-TimeSimulator.prototype.getTime = function() {
-	var date = new Date();
-	return (0.001 * (date.getTime() - this.startTime)).toFixed(2);
-}
-
+// --------------------------------------------------------------
+//
+//
+//
+// Twyrics
+// --------------------------------------------------------------
 
 function Twyrics(config) {
 	if (config.hasOwnProperty('tweet_url') == false) {
@@ -28,7 +16,7 @@ function Twyrics(config) {
 
 	var target  = document.getElementById('lyrics_output');
 	if (!document.getElementById("lyrics_output")) {
-		console.log("Twyrics", "create container");
+		console.log("create container");
 		this.container = document.createElement("div");
 		this.container.setAttribute("id", "lyrics_output");
 		document.body.appendChild(this.container);
@@ -40,7 +28,7 @@ function Twyrics(config) {
 		document.getElementById("lyrics_output").style.color = "white";
 	}
 
-
+	this.visible = true;
 	this.tweets = new Tweets(config.tweet_url);
 	this.lyrics = new Lyrics(config.lyric_url);
 	this.karaoke = new Karaoke()
@@ -60,16 +48,20 @@ function Twyrics(config) {
 }
 
 Twyrics.prototype.onReady = function(lyrics) {
-	console.log("Twyrics", "onReady", lyrics);
+	console.log("onReady", lyrics);
 }
 
 Twyrics.prototype.startSimulate = function() {
-	console.log("Twyrics", "simulate");
+	console.log("simulate");
 	this.simulate = new TimeSimulator();
 }
 
-
 Twyrics.prototype.update = function(progress) {
+
+
+
+	$('#lyrics_output').css({visibility: this.visible ? "visible" : "hidden"});
+
 	if (this.simulate)	{
 		//console.log(this.simulate.getProgress());
 		//console.log(this.karaoke);
@@ -83,4 +75,32 @@ Twyrics.prototype.update = function(progress) {
 
 Twyrics.prototype.destroy = function() {
 	this.karaoke.destroy();
+}
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------
+//
+//
+//
+// helpers
+// --------------------------------------------------------------
+function TimeSimulator() {
+	var date = new Date();
+	this.startTime = date.getTime();
+}
+
+TimeSimulator.prototype.getProgress = function() {
+	var date = new Date();
+	return (0.00001 * (date.getTime() - this.startTime)).toFixed(2);
+}
+
+TimeSimulator.prototype.getTime = function() {
+	var date = new Date();
+	return (0.001 * (date.getTime() - this.startTime)).toFixed(2);
 }
