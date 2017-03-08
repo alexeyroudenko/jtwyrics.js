@@ -9,7 +9,6 @@ var files = [
     'src/simulate.js',
     'src/tweets.js',
     'src/twyrics.js',
-
 ];
 
 return gulp.src(files)
