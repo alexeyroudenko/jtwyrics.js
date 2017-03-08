@@ -17,11 +17,17 @@
 function Tweets(url){
 	this.lyrics = new Array();
 	this.request = new XMLHttpRequest();
-	this.request.open("GET", url, true);
+
 	var that = this;
 	this.request.onload = function() {
 		that.parse(this.responseText);
 	}
+
+	this.request.onerror = function() {
+		that.onError();
+	}
+
+	this.request.open("GET", url, true);
 }
 
 Tweets.prototype.load = function() {
@@ -38,6 +44,10 @@ Tweets.prototype.parse = function(text) {
 //  CallBacks
 //
 Tweets.prototype.onComplete = function() {
+	console.log("Tweets", "onComplete");
+}
+
+Tweets.prototype.onError = function() {
 	console.log("Tweets", "onComplete");
 }
 

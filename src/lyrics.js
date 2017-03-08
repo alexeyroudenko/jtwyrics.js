@@ -203,7 +203,7 @@ Lyrics.prototype.formattedTweets = function(lyricsId) {
 				string += tweet['tweet_author'] + "<br>";
 				string += tweet['tweet_content'] + "<br>";
 				string += tweet['tweet_hashtags'] + "<br>";
-				
+
 				// string += tweet['tweet_url'] + "<br>";
 			}
 		}
@@ -247,4 +247,8 @@ Lyrics.prototype.onComplete = function() {
 
 Lyrics.prototype.onChange = function(item) {
 	//console.log(item);
+}
+
+Lyrics.prototype.onError = function() {
+	console.log("Lyrics", "onError");
 }

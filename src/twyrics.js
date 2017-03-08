@@ -35,16 +35,21 @@ function Twyrics(config) {
 
 	var self = this;
 	this.lyrics.onComplete = function() {
-		//console.log("[Elements]", "done load lyrics", this.lyrics);
 		self.tweets.load();
 	}
 	this.tweets.onComplete = function() {
-		//console.log("[Elements]", "done load tweets", this.tweets);
 		self.lyrics.applyTweets(self.tweets.tweets);
 		self.karaoke.setupw(self.lyrics);
 		self.onReady(self.lyrics);
 	}
+	this.tweets.onError = function() {
+		self.onError();
+	}
 	this.lyrics.load();
+}
+
+Twyrics.prototype.onError = function(lyrics) {
+	console.log("onError", lyrics);
 }
 
 Twyrics.prototype.onReady = function(lyrics) {
@@ -57,8 +62,6 @@ Twyrics.prototype.startSimulate = function() {
 }
 
 Twyrics.prototype.update = function(progress) {
-
-
 
 	$('#lyrics_output').css({visibility: this.visible ? "visible" : "hidden"});
 
