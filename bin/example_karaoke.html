@@ -4,39 +4,47 @@
 		<title>sound</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link rel="stylesheet" href="style.css">
-
 	</head>
 
 	<body>
 
+		<div id="panels">
+			<div id="lyrics"></div>
+			<div id="tweets"></div>
+		</div>
 
-		<div id="lyrics_container"><div id="lyrics_output">....</div>
+		<div id="lyrics_container"><div id="lyrics_output"></div>
 
 		<script src="jtwyrics.min.js"></script>
 
+
+
+
+
 		<script>
 
-		var simulate = new TimeSimulator();
-		var lyrics = new Lyrics("lyrics.ass");
-		var karaoke = new Karaoke();
-		
-		lyrics.onComplete = function(lyrics) {
-			console.log("twyrics.onReady");
-			karaoke.setupw(lyrics);
-			simulate.start();
-			animate();
-		}
-		lyrics.load();
+			var simulate = new TimeSimulator();
+			var lyrics = new Lyrics("lyrics.ass");
+			var karaoke = new Karaoke();
 
-		function animate() {
-			
-			lyrics.update(simulate.getTime());
+			lyrics.onComplete = function(lyrics) {
+				console.log("twyrics.onReady");
+				karaoke.setupw(lyrics);
+				simulate.start();
+				animate();
+			}
 
-			requestAnimationFrame(animate);
-		}
+			lyrics.load();
+
+			function animate() {
+				if (lyrics.changed) {
+					document.getElementById("lyrics").innerHTML = lyrics.getNearest();
+				}
+				lyrics.update(simulate.getTime());
+				requestAnimationFrame(animate);
+			}
 
 		</script>
 

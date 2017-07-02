@@ -27,11 +27,6 @@ body {
 	text-align: center;
 }
 
-/*#div 	{
-	padding: 0px;
-	margin: 0px;
-}
-*/
 #panels > * {
 	border:1px solid #333;
 	background-color: #141414;
@@ -39,8 +34,9 @@ body {
 	text-align: left;
 	padding: 5px;
 	margin: 5px;
-	font-size:12px;
-	width:auto;
+	font-size: 12px;
+	width: auto;
+	/*height: auto;*/
 }
 
 #progressbar {

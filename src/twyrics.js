@@ -63,7 +63,7 @@ Twyrics.prototype.startSimulate = function() {
 
 Twyrics.prototype.update = function(progress) {
 
-	$('#lyrics_output').css({visibility: this.visible ? "visible" : "hidden"});
+	document.getElementById("lyrics_output").style.visibility = this.visible ? "visible" : "hidden";
 
 	if (this.simulate)	{
 		//console.log(this.simulate.getProgress());

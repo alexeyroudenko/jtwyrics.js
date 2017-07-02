@@ -4,10 +4,8 @@
 		<title>sound</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link rel="stylesheet" href="style.css">
-
 	</head>
 
 	<body>
@@ -27,26 +25,26 @@
 
 		<script>
 
-		var simulate = new TimeSimulator();
-		var lyrics = new Lyrics("lyrics.ass");
-		var karaoke = new Karaoke();
-		
-		lyrics.onComplete = function() {
-			console.log("lyrics.onReady", lyrics);
-			karaoke.setupw(lyrics);
-			simulate.start();
-			animate();
+			var simulate = new TimeSimulator();
+			var lyrics = new Lyrics("lyrics.ass");
+			var karaoke = new Karaoke();
 
-		}
-		lyrics.load();
-
-		function animate() {
-			if (lyrics.changed) {
-				document.getElementById("lyrics").innerHTML = lyrics.getNearest();
+			lyrics.onComplete = function() {
+				console.log("lyrics.onReady", lyrics);
+				karaoke.setupw(lyrics);
+				simulate.start();
+				animate();
 			}
-			lyrics.update(simulate.getTime());
-			requestAnimationFrame(animate);
-		}
+
+			lyrics.load();
+
+			function animate() {
+				if (lyrics.changed) {
+					document.getElementById("lyrics").innerHTML = lyrics.getNearest();
+				}
+				lyrics.update(simulate.getTime());
+				requestAnimationFrame(animate);
+			}
 
 		</script>
 

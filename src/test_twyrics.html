@@ -3,11 +3,7 @@
 	<head>
 		<title>sound</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
 		<link rel="stylesheet" href="style.css">
-
 	</head>
 
 	<body>
@@ -16,9 +12,8 @@
 			<div id="lyrics"></div>
 			<div id="tweets"></div>
 		</div>
- 
 
-		<div id="lyrics_container"><div id="lyrics_output"></div></div>
+		<div id="lyrics_container"><div id="lyrics_output">...</div></div>
 
 
 		<script src="karaoke.js"></script>
@@ -28,36 +23,34 @@
 
 		<script>
 
-		var twyrics
+			var twyrics
 
+			twyrics = new Twyrics({
+				tweet_url:"http://pingwithbowie.proun.club/api/collections/",
+				lyric_url:"lyrics.ass"
+			});
 
-		twyrics = new Twyrics({
-			tweet_url:"http://api.proun.club/api/collections/",
-			lyric_url:"lyrics.ass"
-		});
-
-		twyrics.onReady = function(lyrics) {
-			console.log("twyrics.onReady");
-			twyrics.startSimulate();
-			animate();
-		}
-
-		function animate() {
-			
-			twyrics.update(twyrics.simulate.getTime());
-
-			if (twyrics.lyrics.changed) {
-				document.getElementById("lyrics").innerHTML = twyrics.lyrics.formatted();
-				document.getElementById("tweets").innerHTML = twyrics.lyrics.formattedActiveTweets();
-
+			twyrics.onReady = function(lyrics) {
+				console.log("twyrics.onReady");
+				twyrics.startSimulate();
+				animate();
 			}
 
-			requestAnimationFrame(animate);
-		}
+			function animate() {
 
-		function showTweet(tweet) {
-			document.getElementById("tweets").innerHTML = twyrics.lyrics.formattedTweets(tweet);
-		}
+				twyrics.update(twyrics.simulate.getTime());
+
+				if (twyrics.lyrics.changed) {
+					document.getElementById("lyrics").innerHTML = twyrics.lyrics.formatted();
+					document.getElementById("tweets").innerHTML = twyrics.lyrics.formattedActiveTweets();
+				}
+
+				requestAnimationFrame(animate);
+			}
+
+			function showTweet(tweet) {
+				document.getElementById("tweets").innerHTML = twyrics.lyrics.formattedTweets(tweet);
+			}
 
 		</script>
 
